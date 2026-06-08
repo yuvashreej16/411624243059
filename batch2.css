@@ -11,12 +11,34 @@ body{
     font-weight: bolder;
 } */
 img{
-    height:300px;
+    /* height:300px;
     width:300px;
-    border-radius: 500px;
+    border-radius: 500px; */
+/* 
+    MOBILE FIRST */
+    /* height:auto;
+    width:100%; */
+
+    /* DESKTOP FIRST: */
+    height:auto;
+    width:100%;
+}
+/* @media(min-width:1024px) */
+@media(max-width:600px)
+{
+    img{
+        /* MOBILE FIRST */
+        /* height:500px;
+        width:500px; */
+        
+        /* DESKTOP FIRST: */
+        height:500px;
+        width:500px;
+    }
 }
 video{
-    height:500px;
+    /* height:500px; */
+    width:100%;
 
 }
 ol{
@@ -47,8 +69,16 @@ button{
 }
 nav{
     display: flex;
-    flex-direction: row;
-    gap:100px;
+    flex-direction: column;
+    /* gap:100px; */
+}
+@media(min-width:1024px)
+{
+    nav{
+        display:flex;
+        flex-direction: row;
+        gap:100px;
+    }
 }
 
 #p1{
@@ -65,28 +95,36 @@ nav{
 }
 .grid{
     display:grid;
-    grid-template-columns: 33% 33% 33%;
+    /* grid-template-columns: 33% 33% 33%; */
+}
+
+@media(min-width:1024px)
+{
+    .grid{
+        display:grid;
+        grid-template-columns:33% 33% 33%;
+    }
 }
 
 
-/* #one{
-    grid-row: 1/2;
+#one{
+    grid-column: 1/2;
 }
 #two{
-    grid-row: 1/2;
+    grid-column: 1/2;
 }
 #three{
-    grid-row: 1/2;
+    grid-column: 1/2;
 }
 #four{
-    grid-row: 2/3;
+    grid-column: 1/2;
 }
 #five{
-    grid-row: 2/3;
+    grid-column: 1/2;
 }
 #six{
-    grid-row: 2/3;
-} */
+    grid-column: 1/2;
+}
 
 .festival{
     display: grid;
